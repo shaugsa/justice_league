@@ -11,8 +11,9 @@ html(lang="en")
   body
     include modules/header
 
-    section
-      .conatiner
+    section.section-banner
+      img(src="/src/image/Hero section banner.png", alt="banner").section-banner__image
+      .container
         .banner 
           h1.banner__title Zack Snyder's Justice League
           .banner-info
@@ -21,6 +22,114 @@ html(lang="en")
             span.banner-info__time 4h 2min
             span.banner-info__raiting 8.8
           p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+          .banner-control
+            button(type="button").banner-control__btn.banner-control__btn-main Watch
+            button(type="button").banner-control__btn.banner-control__btn-more More information
+    section.sectio 
+      .container
+        h2.section__h2
+          a(href="#").section__h2-link Trending TV Shows
+        .movies 
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/1.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/2.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/3.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/4.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/5.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/6.png", alt="").movies__link__img
+    section.section-second 
+      .container
+        h2.section__h2
+          a(href="#").section__h2-link Trending Movies 
+        .movies 
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/7.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/8.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/9.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/10.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/11.png", alt="").movies__link__img
+          .movies__item
+            a(href="#").movies__link 
+              img(src="image/posters/12.png", alt="").movies__link__img
+        buttton.section__btn See more
+    section.section 
+      .container
+        h2.section__h2
+          a(href="#").section__h2-link Popular Genres
+        .genres 
+          .genres__item.genres__item-romance
+            img(src="/src/image/Genres/1.svg", alt="romance icon")
+            h3.genres__title Romance
+          .genres__item.genres__item-drama
+            img(src="/src/image/Genres/2.svg", alt="romance icon")
+            h3.genres__title Drama
+          .genres__item.genres__item-historical
+            img(src="/src/image/Genres/3.svg", alt="romance icon")
+            h3.genres__title Historical
+          .genres__item.genres__item-action
+            img(src="/src/image/Genres/4.svg", alt="romance icon")
+            h3.genres__title Action
+          .genres__item.genres__item-sci-fi
+            img(src="/src/image/Genres/5.svg", alt="romance icon")
+            h3.genres__title Sci-fi
+          .genres__item.genres__item-horror
+            img(src="/src/image/Genres/6.svg", alt="romance icon")
+            h3.genres__title Horror
+          .genres__item.genres__item-comedy
+            img(src="/src/image/Genres/7.svg", alt="romance icon")
+            h3.genres__title Comedy
+          .genres__item.genres__item-documentary
+            img(src="/src/image/Genres/8.svg", alt="romance icon")
+            h3.genres__title Documentary
+    section.section 
+      .container
+        h2.section__h2
+          a(href="#").section__h2-link Popular Actors &#38; Directors
+        .actors
+          .actors__item
+            img(src="/src/image/actors/1.svg", alt="photo")
+            a(href="#").actors__item-name__actors Samantha Bowen
+          .actors__item
+            img(src="/src/image/actors/2.svg", alt="photo")
+            a(href="#").actors__item-name__actors Rhys Birch
+          .actors__item
+            img(src="/src/image/actors/3.svg", alt="photo")
+            a(href="#").actors__item-name__actors James Holloway
+          .actors__item
+            img(src="/src/image/actors/4.svg", alt="photo")
+            a(href="#").actors__item-name__actors Joshua Walton
+          .actors__item
+            img(src="/src/image/actors/5.svg", alt="photo")
+            a(href="#").actors__item-name__actors Patrick Elliott
+          .actors__item
+            img(src="/src/image/actors/6.svg", alt="photo")
+            a(href="#").actors__item-name__actors Morgan O'Neill
+            
+
+
+        
+
+
 
     include modules/footer
 
