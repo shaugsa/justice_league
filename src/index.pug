@@ -12,20 +12,21 @@ html(lang="en")
     include modules/header
 
     section.section-banner
-      img(src="/src/image/Hero section banner.png", alt="banner").section-banner__image
       .container
         .banner 
-          h1.banner__title Zack Snyder's Justice League
           .banner-info
+            h1.banner__title Zack Snyder's Justice League
             span.banner-info__year 2021
             span.banner-info__age 18+
             span.banner-info__time 4h 2min
             span.banner-info__raiting 8.8
-          p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
-          .banner-control
+            p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+            .banner-control
             button(type="button").banner-control__btn.banner-control__btn-main Watch
             button(type="button").banner-control__btn.banner-control__btn-more More information
-    section.sectio 
+          .banner-image
+            img(src="image/Hero section banner.png", alt="banner").section-banner__image
+      .border
       .container
         h2.section__h2
           a(href="#").section__h2-link Trending TV Shows
@@ -78,28 +79,28 @@ html(lang="en")
           a(href="#").section__h2-link Popular Genres
         .genres 
           .genres__item.genres__item-romance
-            img(src="/src/image/Genres/1.svg", alt="romance icon")
+            img(src="image/Genres/1.svg", alt="romance icon")
             h3.genres__title Romance
           .genres__item.genres__item-drama
-            img(src="/src/image/Genres/2.svg", alt="romance icon")
+            img(src="image/Genres/2.svg", alt="romance icon")
             h3.genres__title Drama
           .genres__item.genres__item-historical
-            img(src="/src/image/Genres/3.svg", alt="romance icon")
+            img(src="image/Genres/3.svg", alt="romance icon")
             h3.genres__title Historical
           .genres__item.genres__item-action
-            img(src="/src/image/Genres/4.svg", alt="romance icon")
+            img(src="image/Genres/4.svg", alt="romance icon")
             h3.genres__title Action
           .genres__item.genres__item-sci-fi
-            img(src="/src/image/Genres/5.svg", alt="romance icon")
+            img(src="image/Genres/5.svg", alt="romance icon")
             h3.genres__title Sci-fi
           .genres__item.genres__item-horror
-            img(src="/src/image/Genres/6.svg", alt="romance icon")
+            img(src="image/Genres/6.svg", alt="romance icon")
             h3.genres__title Horror
           .genres__item.genres__item-comedy
-            img(src="/src/image/Genres/7.svg", alt="romance icon")
+            img(src="image/Genres/7.svg", alt="romance icon")
             h3.genres__title Comedy
           .genres__item.genres__item-documentary
-            img(src="/src/image/Genres/8.svg", alt="romance icon")
+            img(src="image/Genres/8.svg", alt="romance icon")
             h3.genres__title Documentary
     section.section 
       .container
@@ -107,30 +108,30 @@ html(lang="en")
           a(href="#").section__h2-link Popular Actors &#38; Directors
         .actors
           .actors__item
-            img(src="/src/image/actors/1.svg", alt="photo")
-            a(href="#").actors__item-name__actors Samantha Bowen
+            a(href="#").actors__item-actors
+              img(src="image/actors/1.svg", alt="photo")
+              h3.actors__item-actors__name Samantha Bowen
           .actors__item
-            img(src="/src/image/actors/2.svg", alt="photo")
-            a(href="#").actors__item-name__actors Rhys Birch
+            a(href="#").actors__item-actors
+              img(src="image/actors/2.svg", alt="photo")
+              h3.actors__item-actors__name Rhys Birch
           .actors__item
-            img(src="/src/image/actors/3.svg", alt="photo")
-            a(href="#").actors__item-name__actors James Holloway
+            a(href="#").actors__item-actors
+              img(src="image/actors/3.svg", alt="photo")
+              h3.actors__item-actors__name James Holloway
           .actors__item
-            img(src="/src/image/actors/4.svg", alt="photo")
-            a(href="#").actors__item-name__actors Joshua Walton
+            a(href="#").actors__item-actors
+              img(src="image/actors/4.svg", alt="photo")
+              h3.actors__item-actors__name Joshua Walton
           .actors__item
-            img(src="/src/image/actors/5.svg", alt="photo")
-            a(href="#").actors__item-name__actors Patrick Elliott
+            a(href="#").actors__item-actors
+              img(src="image/actors/5.svg", alt="photo")
+              h3.actors__item-actors__name Patrick Elliott
           .actors__item
-            img(src="/src/image/actors/6.svg", alt="photo")
-            a(href="#").actors__item-name__actors Morgan O'Neill
+            a(href="#").actors__item-actors
+              img(src="image/actors/6.svg", alt="photo")
+              h3.actors__item-actors__name Morgan O'Neill
             
-
-
-        
-
-
-
     include modules/footer
 
 

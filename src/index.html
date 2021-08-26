@@ -32,6 +32,14 @@ button:focus {
   margin: 0 auto;
 }
 
+.border {
+  margin: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2F2E2E;
+  margin-bottom: 6rem;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +105,10 @@ button:focus {
   opacity: 1;
 }
 
+.nav-link:hover::after {
+  opacity: 1;
+}
+
 .control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +125,7 @@ button:focus {
 }
 
 .control-btn {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   display: block;
@@ -121,19 +134,19 @@ button:focus {
 }
 
 .control-btn-search {
-  background-image: url(/src/image/searchsvg.svg);
+  background-image: url(image/searchsvg.svg);
   width: 1.8rem;
   height: 1.8rem;
 }
 
 .control-btn-notice {
-  background-image: url(/src/image/notification.svg);
+  background-image: url(image/notification.svg);
   width: 2.13rem;
   height: 2.35rem;
 }
 
 .control-btn-login {
-  background-image: url(/src/image/login.svg);
+  background-image: url(image/login.svg);
   width: 1.8rem;
   height: 1.92rem;
 }
@@ -209,42 +222,43 @@ button:focus {
   margin-left: -1rem;
 }
 
-.section-banner {
-  border-bottom: .1rem solid #2F2E2E;
-  position: relative;
-  overflow: hidden;
-}
-
-.section-banner__image {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
-
 .banner {
-  max-width: 56.2rem;
-  padding-top: 12.2rem;
-  padding-bottom: 20.3rem;
   background-color: #000;
-  -webkit-box-shadow: 100px 0px 100px #000000;
-          box-shadow: 100px 0px 100px #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.banner__title {
+.banner-image {
+  max-width: 90.5rem;
+}
+
+.banner-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.banner-info {
+  max-width: 53.2rem;
+  padding-right: 3rem;
+  font-weight: 800;
+  -webkit-box-shadow: 100px 0 100px #000;
+          box-shadow: 100px 0 100px #000;
+  z-index: 1;
+}
+
+.banner-info .banner__title {
+  margin-top: 12rem;
   font-family: 'Marcellus SC', serif;
   font-size: 8rem;
   line-height: 7.5rem;
 }
 
-.banner__text {
+.banner-info .banner__text {
   color: #C2C2C2;
   font-size: 1.8rem;
   line-height: 1.6;
-}
-
-.banner-info {
-  font-weight: 800;
+  margin-bottom: 3.5rem;
 }
 
 .banner-info__year {
@@ -468,18 +482,20 @@ button:focus {
   text-align: center;
 }
 
-.actors__item-name__actors {
-  display: inline-block;
-  list-style: none;
+.actors__item-actors {
   text-decoration: none;
+}
+
+.actors__item-actors__name {
+  list-style: none;
   color: #fff;
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: 700;
 }
 
-.actors__item img {
-  border-radius: 50%;
+.actors__item-actors__name:hover {
+  color: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -508,20 +524,20 @@ button:focus {
         </ul>
       </div>
     </header>
-    <section class="section-banner"><img class="section-banner__image" src="/src/image/Hero section banner.png" alt="banner">
+    <section class="section-banner">
       <div class="container">
         <div class="banner"> 
-          <h1 class="banner__title">Zack Snyder's Justice League</h1>
-          <div class="banner-info"><span class="banner-info__year">2021</span><span class="banner-info__age">18+</span><span class="banner-info__time">4h 2min</span><span class="banner-info__raiting">8.8</span></div>
-          <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
-          <div class="banner-control">
+          <div class="banner-info">
+            <h1 class="banner__title">Zack Snyder's Justice League</h1><span class="banner-info__year">2021</span><span class="banner-info__age">18+</span><span class="banner-info__time">4h 2min</span><span class="banner-info__raiting">8.8</span>
+            <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+            <div class="banner-control"></div>
             <button class="banner-control__btn banner-control__btn-main" type="button">Watch</button>
             <button class="banner-control__btn banner-control__btn-more" type="button">More information</button>
           </div>
+          <div class="banner-image"><img class="section-banner__image" src="image/Hero section banner.png" alt="banner"></div>
         </div>
       </div>
-    </section>
-    <section class="sectio"> 
+      <div class="border"></div>
       <div class="container">
         <h2 class="section__h2"><a class="section__h2-link" href="#">Trending TV Shows</a></h2>
         <div class="movies"> 
@@ -552,28 +568,28 @@ button:focus {
       <div class="container">
         <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Genres</a></h2>
         <div class="genres"> 
-          <div class="genres__item genres__item-romance"><img src="/src/image/Genres/1.svg" alt="romance icon">
+          <div class="genres__item genres__item-romance"><img src="image/Genres/1.svg" alt="romance icon">
             <h3 class="genres__title">Romance</h3>
           </div>
-          <div class="genres__item genres__item-drama"><img src="/src/image/Genres/2.svg" alt="romance icon">
+          <div class="genres__item genres__item-drama"><img src="image/Genres/2.svg" alt="romance icon">
             <h3 class="genres__title">Drama</h3>
           </div>
-          <div class="genres__item genres__item-historical"><img src="/src/image/Genres/3.svg" alt="romance icon">
+          <div class="genres__item genres__item-historical"><img src="image/Genres/3.svg" alt="romance icon">
             <h3 class="genres__title">Historical</h3>
           </div>
-          <div class="genres__item genres__item-action"><img src="/src/image/Genres/4.svg" alt="romance icon">
+          <div class="genres__item genres__item-action"><img src="image/Genres/4.svg" alt="romance icon">
             <h3 class="genres__title">Action</h3>
           </div>
-          <div class="genres__item genres__item-sci-fi"><img src="/src/image/Genres/5.svg" alt="romance icon">
+          <div class="genres__item genres__item-sci-fi"><img src="image/Genres/5.svg" alt="romance icon">
             <h3 class="genres__title">Sci-fi</h3>
           </div>
-          <div class="genres__item genres__item-horror"><img src="/src/image/Genres/6.svg" alt="romance icon">
+          <div class="genres__item genres__item-horror"><img src="image/Genres/6.svg" alt="romance icon">
             <h3 class="genres__title">Horror</h3>
           </div>
-          <div class="genres__item genres__item-comedy"><img src="/src/image/Genres/7.svg" alt="romance icon">
+          <div class="genres__item genres__item-comedy"><img src="image/Genres/7.svg" alt="romance icon">
             <h3 class="genres__title">Comedy</h3>
           </div>
-          <div class="genres__item genres__item-documentary"><img src="/src/image/Genres/8.svg" alt="romance icon">
+          <div class="genres__item genres__item-documentary"><img src="image/Genres/8.svg" alt="romance icon">
             <h3 class="genres__title">Documentary</h3>
           </div>
         </div>
@@ -583,12 +599,18 @@ button:focus {
       <div class="container">
         <h2 class="section__h2"><a class="section__h2-link" href="#">Popular Actors &#38; Directors</a></h2>
         <div class="actors">
-          <div class="actors__item"><img src="/src/image/actors/1.svg" alt="photo"><a class="actors__item-name__actors" href="#">Samantha Bowen</a></div>
-          <div class="actors__item"><img src="/src/image/actors/2.svg" alt="photo"><a class="actors__item-name__actors" href="#">Rhys Birch</a></div>
-          <div class="actors__item"><img src="/src/image/actors/3.svg" alt="photo"><a class="actors__item-name__actors" href="#">James Holloway</a></div>
-          <div class="actors__item"><img src="/src/image/actors/4.svg" alt="photo"><a class="actors__item-name__actors" href="#">Joshua Walton</a></div>
-          <div class="actors__item"><img src="/src/image/actors/5.svg" alt="photo"><a class="actors__item-name__actors" href="#">Patrick Elliott</a></div>
-          <div class="actors__item"><img src="/src/image/actors/6.svg" alt="photo"><a class="actors__item-name__actors" href="#">Morgan O'Neill</a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/1.svg" alt="photo">
+              <h3 class="actors__item-actors__name">Samantha Bowen</h3></a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/2.svg" alt="photo">
+              <h3 class="actors__item-actors__name">Rhys Birch</h3></a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/3.svg" alt="photo">
+              <h3 class="actors__item-actors__name">James Holloway</h3></a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/4.svg" alt="photo">
+              <h3 class="actors__item-actors__name">Joshua Walton</h3></a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/5.svg" alt="photo">
+              <h3 class="actors__item-actors__name">Patrick Elliott</h3></a></div>
+          <div class="actors__item"><a class="actors__item-actors" href="#"><img src="image/actors/6.svg" alt="photo">
+              <h3 class="actors__item-actors__name">Morgan O'Neill</h3></a></div>
         </div>
       </div>
     </section>
