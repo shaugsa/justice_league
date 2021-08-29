@@ -499,11 +499,39 @@ button:focus {
   color: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
 }
 
-.premieres__block {
+.premieres {
+  max-width: 144rem;
   background: linear-gradient(87.02deg, #0D1A73 29.67%, #000000 70.52%);
   -webkit-box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
           box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+}
+
+.premieres__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.premieres__block-film {
+  width: 50%;
+}
+
+.premieres__block-film img {
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.premieres__block-relize {
+  width: 50%;
+}
+
+.premieres__block-relize__content {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -627,7 +655,11 @@ button:focus {
         <div class="premieres">
           <div class="premieres__block">
             <div class="premieres__block-film"> <img src="image/film.jpg" alt="comming soon"></div>
-            <div class="premieres__item-relize"><img src="image/date.jpg" alt="date"></div>
+            <div class="premieres__block-relize">
+              <div class="premieres__block-relize__content"><img src="image/2021 2.svg" alt="date">
+                <h2 class="premieres__block-relize__title"> Coming Soon...</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
